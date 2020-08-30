@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.Title {
+  color: #028090;
+  margin: 5rem auto 2rem;
+}
+
+.Form {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto 2rem;
+}
+
+.Input {
+  border: .1rem solid #e5e5e5;
+  border-radius: .25rem;
+  padding: 1rem;
+  width: 60%;
+}
+
+.Button, .Outline {
+  font-weight: bold;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: .25rem;
+}
+
+.Button {
+  background-color: #43aa8b;
+  color: #fff;
+  border: 0;
+}
+
+.Button:hover, .Button:focus, .Button:active {
+  background-color: #028090;
+}
+
+.Outline {
+  border: .1rem solid #43aa8b;
+  background-color: #fff;
+  color: #43aa8b;
+}
+
+.Outline:hover, .Outline:focus, .Outline:active {
+  border: .1rem solid #43aa8b;
+  background-color: #43aa8b;
+  color: #fff;
+}
+
+.Download .Outline:last-child {
+  margin-left: 1rem;
+}
+
+.Print {
+  /*display: none;*/
+  background-color: #fff;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+@media print {
+  .Print {
+    /*display: none;*/
+  }
+}
