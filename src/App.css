@@ -15,17 +15,18 @@
 }
 
 .Input {
-  border: .1rem solid #e5e5e5;
-  border-radius: .25rem;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 0.25rem;
   padding: 1rem;
   width: 60%;
 }
 
-.Button, .Outline {
+.Button,
+.Outline {
   font-weight: bold;
   padding: 1rem 2rem;
   cursor: pointer;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .Button {
@@ -34,18 +35,22 @@
   border: 0;
 }
 
-.Button:hover, .Button:focus, .Button:active {
+.Button:hover,
+.Button:focus,
+.Button:active {
   background-color: #028090;
 }
 
 .Outline {
-  border: .1rem solid #43aa8b;
+  border: 0.1rem solid #43aa8b;
   background-color: #fff;
   color: #43aa8b;
 }
 
-.Outline:hover, .Outline:focus, .Outline:active {
-  border: .1rem solid #43aa8b;
+.Outline:hover,
+.Outline:focus,
+.Outline:active {
+  border: 0.1rem solid #43aa8b;
   background-color: #43aa8b;
   color: #fff;
 }
