@@ -1,6 +1,9 @@
 import React, {useCallback, useEffect} from 'react'
+import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 import QRCode from 'qrcode'
+
+import {selectCounter} from '../../reducers/selectors'
 
 const opts = {
   errorCorrectionLevel: 'H',
@@ -32,8 +35,12 @@ const QrCode = ({text}) => {
   return <img id="image" src="http" alt="QR code of a text link" />
 }
 
+const mapStateToProps = state => ({
+  text: selectCounter(state)
+})
+
 QrCode.propTypes = {
   text: PropTypes.string
 }
 
-export default QrCode
+export default connect(mapStateToProps)(QrCode)

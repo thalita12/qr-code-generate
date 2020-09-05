@@ -4,13 +4,11 @@ import {
   exportComponentAsPDF,
   exportComponentAsPNG
 } from 'react-component-export-image'
-import QrCode from '../qr-code'
 
 // eslint-disable-next-line react/display-name
 const ComponentToPrint = forwardRef((props, ref) => (
   <div ref={ref}>
     <h1>Aqui será uma impressão do QR Code:</h1>
-    {/*<QrCode text={props} />*/}
   </div>
 ))
 
