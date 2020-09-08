@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 import QRCode from 'qrcode'
 
-import {selectCounter} from '../../reducers/selectors'
+import { selectText } from '../../reducers/selectors'
 
 const opts = {
   errorCorrectionLevel: 'H',
@@ -36,7 +36,7 @@ const QrCode = ({text}) => {
 }
 
 const mapStateToProps = state => ({
-  text: selectCounter(state)
+  text: selectText(state)
 })
 
 QrCode.propTypes = {

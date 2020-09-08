@@ -1,10 +1,10 @@
-const counterReducer = (state = '', {type, payload}) => {
+const textReducer = (state = '', {type, payload}) => {
   switch (type) {
-    case 'GENERATE':
+    case 'SET_TEXT':
       return payload
     default:
       return state
   }
 }
 
-export default counterReducer
+export default textReducer

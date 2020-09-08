@@ -1,1 +1,1 @@
-export const selectCounter = state => state.text
+export const selectText = state => state.text

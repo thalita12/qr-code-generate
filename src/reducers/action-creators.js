@@ -1,1 +1,1 @@
-export const generate = payload => ({type: 'GENERATE', payload})
+export const setText = payload => ({type: 'SET_TEXT', payload})

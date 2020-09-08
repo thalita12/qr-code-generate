@@ -1,4 +1,4 @@
 import {combineReducers} from 'redux'
-import counterReducers from './reducers'
+import textReducers from './reducers'
 
-export default combineReducers({text: counterReducers})
+export default combineReducers({text: textReducers})

@@ -1,14 +1,14 @@
 import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
-import {generate} from './reducers/action-creators'
+import {setText} from './reducers/action-creators'
 
 import Printer from './components/printer'
 import QrCode from './components/qr-code'
 
 import './App.css'
 
-const App = ({generate}) => {
+const App = ({setTextAction}) => {
   const [showQrCode, setShowQrCode] = useState(false)
   const [showPrinterPDF, setShowPrinterPDF] = useState(false)
   const [showPrinterPNG, setShowPrinterPNG] = useState(false)
@@ -18,7 +18,7 @@ const App = ({generate}) => {
   }
 
   const handleText = text => {
-    generate(text)
+    setTextAction(text)
   }
 
   const handleFileAsPDF = () => {
@@ -70,9 +70,9 @@ const App = ({generate}) => {
 }
 
 App.propTypes = {
-  generate: PropTypes.func
+  setTextAction: PropTypes.func
 }
 
 export default connect(null, {
-  generate: generate
+  setTextAction: setText
 })(App)
