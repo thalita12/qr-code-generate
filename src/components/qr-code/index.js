@@ -12,13 +12,13 @@ const opts = {
   margin: 1
 }
 
-const QrCode = ({text}) => {
+const QrCode = ({text, id}) => {
   const generateQR = useCallback(() => {
     try {
       QRCode.toDataURL(text, opts, function (err, url) {
         if (err) throw err
 
-        const img = document.getElementById('image')
+        const img = document.getElementById(id)
         if (img.src !== url) {
           img.src = url
         }
@@ -26,13 +26,13 @@ const QrCode = ({text}) => {
     } catch (err) {
       console.error(`Error QR code generate: ${err}`)
     }
-  }, [text])
+  }, [text, id])
 
   useEffect(() => {
     generateQR()
   }, [generateQR])
 
-  return <img id="image" src="http" alt="QR code of a text link" />
+  return <img id={id} src="http" alt="QR code of a text link" />
 }
 
 const mapStateToProps = state => ({
@@ -40,7 +40,8 @@ const mapStateToProps = state => ({
 })
 
 QrCode.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string,
+  id: PropTypes.string
 }
 
 export default connect(mapStateToProps)(QrCode)

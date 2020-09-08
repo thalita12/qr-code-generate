@@ -48,7 +48,7 @@ const App = ({setTextAction}) => {
 
       {showQrCode ? (
         <>
-          <QrCode />
+          <QrCode id="mainImg" />
 
           <Printer showPrinterPDF={showPrinterPDF} showPrinterPNG={showPrinterPNG} />
 

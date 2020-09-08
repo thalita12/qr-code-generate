@@ -1,5 +1,5 @@
 {
-  "name": "random-qr-code",
+  "name": "qr-code-generate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
